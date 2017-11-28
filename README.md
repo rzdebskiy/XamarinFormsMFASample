@@ -1,5 +1,5 @@
 # MFATestADAL
-Super simple example of Multi-Factor Authentication in Xamarin Forms iOS/Android/UWP app usign Active Directory Authentication Library (ADAL).
+Super simple example of Multi-Factor Authentication in Xamarin Forms iOS/Android/UWP app using Active Directory Authentication Library (ADAL).
 Sample is based on [Dependency Service ADAL Sample in Xamarin Blog](https://blog.xamarin.com/put-adal-xamarin-forms/), Windows Phone Silverlight implementation replaced with UWP. 
 
 To run the sample:
