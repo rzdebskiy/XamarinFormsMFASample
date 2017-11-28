@@ -7,5 +7,5 @@ public static string clientId = "INSERT YOUR CLIENT ID HERE";
 
 Screenshots on how it works:
 
-![Main Screen](img/iOS_MFA_1.jpg?raw=true)
+![Main Screen](img/iOS_MFA_1.jpg)
 
