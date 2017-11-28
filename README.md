@@ -7,8 +7,10 @@ public static string clientId = "INSERT YOUR CLIENT ID HERE";
 
 Screenshots on how it works:
 
+<p align="center">
 <img src="img/iOS_MFA_1.jpg" width="250"/>
 <img src="img/iOS_MFA_2.jpg" width="250"/>
 <img src="img/iOS_MFA_3.jpg" width="250"/>
 <img src="img/iOS_MFA_4.jpg" width="250"/>
 <img src="img/iOS_MFA_5.jpg" width="250"/>
+</p>
