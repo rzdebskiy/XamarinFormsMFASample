@@ -10,7 +10,9 @@ To run the sample:
 
 `public static string clientId = "INSERT YOUR CLIENT ID HERE";`
 
-5. Change returnUri in [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L15) to valid URI you have configured in Azure Active Directory App Registration or use existing one from Sample (ensure you configure the same in Azure AD the portal).
+5. Change returnUri in [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L15) to valid URI you have configured in Azure Active Directory App Registration or use existing one from this sample (ensure you configure the same in Azure AD the portal):
+
+`public static string returnUri = "http://MFATestPCL-redirect";`
 
 Screenshots on how it works:
 
