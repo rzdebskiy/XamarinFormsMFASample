@@ -20,9 +20,9 @@ Screenshots on how it works:
 # Android:
 
 <p align="center">
-<img src="img/Android_MFA_1.jpg" width="150"/>
-<img src="img/Android_MFA_2.jpg" width="150"/>
-<img src="img/Android_MFA_3.jpg" width="150"/>
-<img src="img/Android_MFA_4.jpg" width="150"/>
-<img src="img/Android_MFA_5.jpg" width="150"/>
+<img src="img/Android_MFA_1.png" width="150"/>
+<img src="img/Android_MFA_2.png" width="150"/>
+<img src="img/Android_MFA_3.png" width="150"/>
+<img src="img/Android_MFA_4.png" width="150"/>
+<img src="img/Android_MFA_5.png" width="150"/>
 </p>
