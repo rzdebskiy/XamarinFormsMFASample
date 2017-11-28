@@ -7,5 +7,7 @@ public static string clientId = "INSERT YOUR CLIENT ID HERE";
 
 Screenshots on how it works:
 
-![Main Screen](img/iOS_MFA_1.jpg) ![Login](img/iOS_MFA_2.jpg)
-<img src="img/iOS_MFA_1.jpg" width="350"/>
+<img src="img/iOS_MFA_1.jpg" width="250"/>
+<img src="img/iOS_MFA_2.jpg" width="250"/>
+<img src="img/iOS_MFA_3.jpg" width="250"/>
+<img src="img/iOS_MFA_4.jpg" width="250"/>
