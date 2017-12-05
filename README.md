@@ -14,6 +14,7 @@ Sample is based on [Dependency Service ADAL Sample in Xamarin Blog](https://blog
 ![Azure Active Directory New App Registration](img/CreateAppRegistration.PNG)
 
 "Redirect URI" is any valid URI identifier (you don't need to register it with DNS) - it is important that you client app configuration uses the same.
+
 4. Change returnUri in [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L15) to valid URI you have configured in the previous step in Azure Active Directory App Registration or use existing one from this sample (ensure you configure the same in the previous step):
 
 ```csharp
