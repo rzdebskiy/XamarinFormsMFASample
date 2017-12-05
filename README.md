@@ -39,7 +39,7 @@ public static string clientId = "<<INSERT YOUR CLIENT ID HERE>>";`
 ![Azure AD All Users](img/ADUsers2.PNG)
 ![Create AD User](img/ADUsers3.PNG)
 
-When filling out new user information pay attention to user name. In case you have corporate domain like 'companyname.com' use it after '@'. On case you have personal subscription - domain name could be auto generated - take a look at the top left bar - here you see auto-generated domain name. Add it after '@' and then use '.onmicrosoft.com' domain suffix - this is pattern for auto generated Azure Active Directory Domain (Tenant) names. Additionally go to profile section and give a user first and last name. Also pay attention to user password:
+When filling out new user information pay attention to user name. In case you have corporate domain like 'companyname.com' use it after '@'. In case you have personal subscription - domain name could be auto generated - take a look at the top left bar - here you see auto-generated domain name. Add it after '@' and then use '.onmicrosoft.com' domain suffix - this is pattern for auto generated Azure Active Directory Domain (Tenant) names. Additionally go to profile section and give a user first and last name. Also pay attention to user password:
 
  ![New AD User](img/ADNewUser.PNG)   
 
