@@ -6,13 +6,20 @@ Sample is based on [Dependency Service ADAL Sample in Xamarin Blog](https://blog
 
 1. Login to your [Azure Subscription](https://portal.azure.com/) or [start free trial](https://azure.microsoft.com/en-us/offers/ms-azr-0044p)
 2. To use Azure Active Directory you need to register your app for an access. Go to "Azure Active Directory" blade (section) - you will go to your corporate or automatically generated  Azure Active Directory tenant and click "App registrations":
+
 ![Azure Active Directory App Registrations](img/AzureADAppRegistration.PNG)
+
 3. Click "New application registration", enter name of the application to identify it, choose "Native" application type and enter "Redirect URI". 
+
 ![Azure Active Directory New App Registration](img/CreateAppRegistration.PNG)
+
 "Redirect URI" is any valid URI identifier (you don't need to register it with DNS) - it is important that you client app configuration uses the same.
+
 4. Change returnUri in [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L15) to valid URI you have configured in the previous step in Azure Active Directory App Registration or use existing one from this sample (ensure you configure the same in the previous step):
 
-`public static string returnUri = "http://MFATestPCL-redirect";`
+```csharp
+public static string returnUri = "http://MFATestPCL-redirect";`
+```
 
 5. Now you have your app registered: 
 
@@ -22,7 +29,9 @@ click on it to go to this new app details and settings and copy Application ID.
 
 6. Insert this Application ID (often referred also as Client ID) into [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L13)
 
-`public static string clientId = "INSERT YOUR CLIENT ID HERE";`
+```csharp
+public static string clientId = "<<INSERT YOUR CLIENT ID HERE>>";`
+```
 
 7. Now let's create user (or jump to the next if you already have it) - go again to "Azure Active Directory" blade (section), click "Users and Groups", then - "All users" and finally "New User"
 
@@ -41,8 +50,10 @@ When filling out new user information pay attention to user name. In case you ha
  ![Users list](img/UsersList.PNG) 
 
 9. Select user with checkbox and click "Enable"
- ![Enable MFA](img/MFAEnable.PNG) 
- You should get the following message:
+
+![Enable MFA](img/MFAEnable.PNG) 
+
+You should get the following message:
 
   ![MFA Success](img/MFASuccess.PNG)  
 
