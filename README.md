@@ -6,9 +6,13 @@ Sample is based on [Dependency Service ADAL Sample in Xamarin Blog](https://blog
 
 1. Login to your [Azure Subscription](https://portal.azure.com/) or [start free trial](https://azure.microsoft.com/en-us/offers/ms-azr-0044p)
 2. To use Azure Active Directory you need to register your app for an access. Go to "Azure Active Directory" blade (section) - you will go to your corporate or automatically generated  Azure Active Directory tenant and click "App registrations":
+
 ![Azure Active Directory App Registrations](img/AzureADAppRegistration.PNG)
+
 3. Click "New application registration", enter name of the application to identify it, choose "Native" application type and enter "Redirect URI". 
+
 ![Azure Active Directory New App Registration](img/CreateAppRegistration.PNG)
+
 "Redirect URI" is any valid URI identifier (you don't need to register it with DNS) - it is important that you client app configuration uses the same.
 4. Change returnUri in [MainPage.xaml.cs](MFATest/MFATest/MainPage.xaml.cs#L15) to valid URI you have configured in the previous step in Azure Active Directory App Registration or use existing one from this sample (ensure you configure the same in the previous step):
 
@@ -41,8 +45,10 @@ When filling out new user information pay attention to user name. In case you ha
  ![Users list](img/UsersList.PNG) 
 
 9. Select user with checkbox and click "Enable"
- ![Enable MFA](img/MFAEnable.PNG) 
- You should get the following message:
+
+![Enable MFA](img/MFAEnable.PNG) 
+
+You should get the following message:
 
   ![MFA Success](img/MFASuccess.PNG)  
 
