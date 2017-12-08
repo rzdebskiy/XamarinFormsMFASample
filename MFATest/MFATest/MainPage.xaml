@@ -5,15 +5,21 @@
              x:Class="MFATest.MainPage">
     <ContentPage.Content>
         <StackLayout>
-            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="100"
+            <BoxView HorizontalOptions="FillAndExpand" HeightRequest="50"
           VerticalOptions="Start"/>
             <Label Text="Welcome to Xamarin.Forms!"
                 VerticalOptions="Center"
-                   HeightRequest="100"
+                   HeightRequest="20"
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="btnLogin" Text="Login to Azure Active Directory" Clicked="btnLogin_Clicked" VerticalOptions="Center" />
-            <Label x:Name="lblMessage" />
-            
+            <StackLayout Orientation="Horizontal">
+                <Label x:Name="lblTextUser" Text="Authenticated User: " FontSize="Small"/>
+                <Label x:Name="lblUserName" Text="none" FontSize="Small"/>
+            </StackLayout>
+            <Label x:Name="lblMessage" HeightRequest="100" FontSize="Small"/>
+            <Button x:Name="btnCallRestBasic" Text="Call REST Service Basic auth" Clicked="btnCallRest_Clicked" />
+            <Button x:Name="btnCallRestAdal" Text="Call REST Service AD auth" Clicked="btnCallRestAdal_Clicked" />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
