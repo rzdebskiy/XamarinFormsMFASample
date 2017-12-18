@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 using Foundation;
 using UIKit;
 using Xamarin.Forms;
@@ -25,6 +22,17 @@ namespace MFATest.iOS.Helper
             var platformParams = new PlatformParameters(controller);
             var authResult = await authContext.AcquireTokenAsync(resource, clientId, uri, platformParams);
             return authResult;
+        }
+
+        void IAuthenticator.ClearAllCookies()
+        {
+            NSHttpCookieStorage CookieStorage = NSHttpCookieStorage.SharedStorage;
+
+            foreach (var cookie in CookieStorage.Cookies)
+                CookieStorage.DeleteCookie(cookie);
+
+            //other option could be to delete only cookies with the following names - "MSISAuth", "MSISAuthenticated", "MSISLoopDetectionCookie" 
+
         }
     }
 }

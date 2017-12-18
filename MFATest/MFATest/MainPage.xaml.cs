@@ -1,9 +1,5 @@
 ﻿using Microsoft.IdentityModel.Clients.ActiveDirectory;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace MFATest
@@ -15,6 +11,7 @@ namespace MFATest
         public static string returnUri = "http://MFATestPCL-redirect";
         private const string graphResourceUri = "https://graph.windows.net";
         private AuthenticationResult authResult = null;
+
         public MainPage()
         {
             InitializeComponent();
@@ -25,14 +22,26 @@ namespace MFATest
             try
             {
                 var auth = DependencyService.Get<IAuthenticator>();
-                var data = await auth.Authenticate(authority, graphResourceUri, clientId, returnUri);
-                var userName = data.UserInfo.GivenName + " " + data.UserInfo.FamilyName;
+                authResult = await auth.Authenticate(authority, graphResourceUri, clientId, returnUri);
+                var userName = authResult.UserInfo.GivenName + " " + authResult.UserInfo.FamilyName;
                 await DisplayAlert("Token", userName, "Ok", "Cancel");
             }
             catch (Exception ex)
             {
                 await DisplayAlert("Error", ex.Message, "Ok");
             }
+        }
+
+        private void btnLogout_Clicked(object sender, EventArgs e)
+        {
+            if (authResult != null)
+            {
+                AuthenticationContext ac = new AuthenticationContext(authority);
+                ac.TokenCache.Clear();
+                var auth = DependencyService.Get<IAuthenticator>();
+                auth.ClearAllCookies();
+            }
+
         }
     }
 }

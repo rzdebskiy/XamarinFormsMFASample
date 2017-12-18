@@ -12,6 +12,7 @@
                    HeightRequest="100"
                 HorizontalOptions="CenterAndExpand" />
             <Button x:Name="btnLogin" Text="Login to Azure Active Directory" Clicked="btnLogin_Clicked" VerticalOptions="Center" />
+            <Button x:Name="btnLogout" Text="Clear token and all cookies" Clicked="btnLogout_Clicked"  VerticalOptions="Center" />
             <Label x:Name="lblMessage" />
             
         </StackLayout>
