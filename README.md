@@ -79,6 +79,10 @@ You should get the following message:
 <img src="img/Android_MFA_5.png" width="150"/>
 </p>
 
+# Note:
+
+To simulate "Logout" behavior there is a button with label "Clear token and all cookies". It clears the cached token as well as all browser cookies. Second step is needed because ADAL can cache a cookie in a browser cache to reissue the token if user/admin chooses to "Save login information for specific number of days". In real app if you use additional browser-based functionality you can delete only authentication cookies ("MSISAuth", "MSISAuthenticated" and "MSISLoopDetectionCookie") - not all of them.
+
 # Useful notes, links and resources:
 * To have Multi-Factor Authentication functionality available for your account you need to activate [Azure Active Directory Premium free trial](https://azure.microsoft.com/en-us/trial/get-started-active-directory/) or purchase [Azure Active Directory Premium](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-get-started-premium)/[Enterprise Mobility + Security](https://www.microsoft.com/en-us/cloud-platform/enterprise-mobility-security). 
 * How to create Azure Active Directory [tenant and test user with enabled multi-factor authentication](https://docs.microsoft.com/en-us/rest/api/datacatalog/create-an-azure-active-directory-tenant).
